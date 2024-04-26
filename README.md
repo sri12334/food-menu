@@ -20,7 +20,7 @@
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/Screenshot.png)
 
 ## Technologies
 
@@ -35,17 +35,29 @@ clone the repo and start using the stop watch.
 
 ## Code Examples
 
-```js
+const filterHandler = (button => {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((item) => {
+        const id = button.id;
+        if (id === 'all') {
+            item.classList.remove('hidden');
+        } else if (item.classList.contains(id)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+});
 
-```
+export default filterHandler;
 
 ## Features
 
 List of features ready and Todos for future development
 
--
--
--
+- Html
+- css
+- js
 
 To-do list:
 
@@ -54,7 +66,7 @@ To-do list:
 
 ## Status
 
-Project is: _in progress_
+Project is: done
 
 ## Inspiration
 
